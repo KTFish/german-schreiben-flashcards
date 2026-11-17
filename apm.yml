@@ -1,0 +1,11 @@
+name: german-schreiben-flashcards
+version: 0.1.0
+description: Generate C1 German writing flashcards from essay drafts with topic-agnostic discourse filtering.
+targets:
+  - copilot
+  - gemini
+  - antigravity
+  - claude
+dependencies:
+  apm: []
+  mcp: []
