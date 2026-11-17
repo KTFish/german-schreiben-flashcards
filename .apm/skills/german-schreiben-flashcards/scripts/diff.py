@@ -42,8 +42,8 @@ def split_into_sentences(text: str) -> List[str]:
     paragraphs = [p.strip() for p in re.split(r"\n\s*\n", clean_text) if p.strip()]
     
     sentences = []
-    # Protected common abbreviations
-    abbr_pattern = r"\b(?:z\.B|d\.h|u\.a|usw|bzw|ca|dr|prof|etc)\."
+    # Protected common abbreviations and ordinal numbers (e.g. 20. Jahrhundert)
+    abbr_pattern = r"\b(?:z\.B|d\.h|u\.a|usw|bzw|ca|dr|prof|etc|\d+)\."
     
     for para in paragraphs:
         # Replace newlines with spaces within a paragraph
